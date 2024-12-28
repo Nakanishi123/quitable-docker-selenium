@@ -5,5 +5,5 @@ docker run --rm -p 4444:4444 -p 7900:7900 -p 11451:11451 --shm-size="2g" nakanis
 ```
 
 ```bash
-curl localhost:11451/shutdown
+curl http://localhost:11451/shutdown
 ```
