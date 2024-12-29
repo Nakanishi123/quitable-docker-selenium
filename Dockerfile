@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY ./src/ .
 
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o shutdown_server shutdown_server.go
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -trimpath -o shutdown_server shutdown_server.go
 
 
 FROM selenium/standalone-chrome:131.0
