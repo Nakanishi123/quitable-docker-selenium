@@ -1,4 +1,4 @@
-FROM golang:1.25.0-alpine3.22 AS builder
+FROM golang:1.25.1-alpine3.22 AS builder
 
 WORKDIR /app
 
@@ -7,7 +7,7 @@ COPY ./src/ .
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -trimpath -o shutdown_server shutdown_server.go
 
 
-FROM selenium/standalone-chrome:139.0
+FROM selenium/standalone-chrome:140.0
 
 USER root
 
