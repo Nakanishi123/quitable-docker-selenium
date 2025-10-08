@@ -11,3 +11,7 @@ curl http://localhost:11451/shutdown
 ```
 
 動作確認 -> [http://localhost:7900/?autoconnect=1&resize=scale&password=secret](http://localhost:7900/?autoconnect=1&resize=scale&password=secret)
+
+## Memo
+
+[entry_point.sh](https://github.com/SeleniumHQ/docker-selenium/blob/trunk/Base/entry_point.sh)
